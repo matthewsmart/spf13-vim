@@ -394,11 +394,6 @@
         nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
     " }
 
-    " PyMode {
-        let g:pymode_lint_checker = "pyflakes"
-        let g:pymode_utils_whitespaces = 0
-    " }
-
     " ctrlp {
         let g:ctrlp_working_path_mode = 2
         nnoremap <silent> <D-t> :CtrlP<CR>
@@ -419,13 +414,6 @@
     " TagBar {
         nnoremap <silent> <leader>tt :TagbarToggle<CR>
     "}
-
-    " PythonMode {
-    " Disable if python support not present
-        if !has('python')
-            let g:pymode = 1
-        endif
-    " }
 
     " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
