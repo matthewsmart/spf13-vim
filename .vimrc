@@ -17,6 +17,9 @@
 
 " Environment {
 
+    " Fish {
+        set shell=/bin/sh
+    " }
     " Basics {
         set nocompatible        " Must be first line
     " }
