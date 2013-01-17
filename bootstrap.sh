@@ -28,15 +28,6 @@ today=`date +%Y%m%d`
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && mv $i $i.$today; done
 
 
-if [ ! -e $endpath/.git ]; then
-    echo "cloning spf13-vim"
-    git clone --recursive -b 3.0 http://github.com/spf13/spf13-vim.git $endpath
-else
-    echo "updating spf13-vim"
-    cd $endpath && git pull
-fi
-
-
 echo "setting up symlinks"
 lnif $endpath/.vimrc $HOME/.vimrc
 lnif $endpath/.vimrc.fork $HOME/.vimrc.fork
